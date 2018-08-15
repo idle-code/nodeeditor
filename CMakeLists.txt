@@ -19,6 +19,7 @@ option(BUILD_TESTING "Build tests" "${NE_DEVELOPER_DEFAULTS}")
 option(BUILD_EXAMPLES "Build Examples" "${NE_DEVELOPER_DEFAULTS}")
 option(BUILD_SHARED_LIBS "Build as shared library" ON)
 option(NE_FORCE_TEST_COLOR "Force colorized unit test output" OFF)
+option(BUILD_PYSIDE_BINDINGS "Build PySide2 python bindings" ON)
 
 enable_testing()
 
@@ -154,6 +155,14 @@ if(BUILD_TESTING)
   add_subdirectory(test)
 endif()
 
+##################
+# PyQtNodes python bindings
+##
+
+if(BUILD_PYSIDE_BINDINGS)
+  add_subdirectory(src/PyQtNodes)
+endif()
+
 ###############
 # Installation
 ##
@@ -187,3 +196,6 @@ install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/NodeEditorConfig.cmake
   DESTINATION ${INSTALL_CONFIGDIR}
 )
+
+# TODO: install PyNodeEditor
+

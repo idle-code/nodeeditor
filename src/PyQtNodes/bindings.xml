@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<typesystem package="QtNodes">
+  <!--<primitive-type name="bool"/>
+    <primitive-type name="std::string"/>-->
+  <namespace-type name="QtNodes">
+    <object-type name="DataModelRegistry">
+    </object-type>
+  </namespace-type>
+
+</typesystem>
+
