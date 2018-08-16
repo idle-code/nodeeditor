@@ -1,11 +1,65 @@
 <?xml version="1.0"?>
 <typesystem package="QtNodes">
-  <!--<primitive-type name="bool"/>
-    <primitive-type name="std::string"/>-->
+
+  <primitive-type name="bool"/>
+  <primitive-type name="std::string"/>
+
+  <namespace-type name="std" generate="no" />
+
   <namespace-type name="QtNodes">
+    <namespace-type name="detail" generate="no" />
+
+    <enum-type name="NodeValidationState" />
+    <enum-type name="PortType" />
+
     <object-type name="DataModelRegistry">
+
     </object-type>
+    <object-type name="Connection">
+      <object-type name="QPrivateSignal" />
+    </object-type>
+    <object-type name="ConnectionGeometry" />
+    <object-type name="ConnectionGraphicsObject">
+      <object-type name="QPrivateSignal" />
+      <enum-type name="Type" />
+    </object-type>
+    <object-type name="ConnectionState" />
+    <object-type name="ConnectionStyle" />
+    <object-type name="DataModelRegistry::HasStaticMethodName" />
+    <object-type name="FlowScene">
+      <object-type name="QPrivateSignal" />
+    </object-type>
+    <object-type name="FlowView">
+      <object-type name="QPrivateSignal" />
+    </object-type>
+    <object-type name="FlowViewStyle" />
+    <object-type name="Node">
+      <object-type name="QPrivateSignal" />
+    </object-type>
+    <object-type name="NodeData" />
+    <object-type name="NodeDataModel">
+      <object-type name="QPrivateSignal" />
+      <enum-type name="ConnectionPolicy" />
+    </object-type>
+    <object-type name="NodeDataType" />
+    <object-type name="NodeGeometry" />
+    <object-type name="NodeGraphicsObject">
+      <object-type name="QPrivateSignal" />
+      <enum-type name="Type" />
+    </object-type>
+    <object-type name="NodePainterDelegate" />
+    <object-type name="NodeState">
+      <enum-type name="ReactToConnectionState" />
+    </object-type>
+    <object-type name="NodeStyle" />
+    <object-type name="Port" />
+    <object-type name="Serializable" />
   </namespace-type>
+<!--
+Style
+drand48_data
+random_data
+-->
 
 </typesystem>
 
